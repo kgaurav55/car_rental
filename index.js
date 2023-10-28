@@ -31,6 +31,9 @@ app.use('/bookings',bookingsRoute);
 app.get('/',(req,res)=>{
    res.send("hi there ");
 })
+app.get('/hi',(req,res)=>{
+  res.send("hi there1 ");
+})
 
 
 
