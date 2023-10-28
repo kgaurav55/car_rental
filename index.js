@@ -14,7 +14,7 @@ import bookingsRoute from './routes/bookings.js';
 import availableCarsRoute from './routes/availablecars.js';
 import verifyToken from './verifyToken.js';
 const app = express();
-const port = 3000;
+const port = 3789;
 app.use(cors());
 app.use(json());
 app.use(urlencoded({ extended: false }));
