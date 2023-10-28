@@ -6,6 +6,8 @@ import verifyToken  from '../verifyToken.js';
 const secretKey = 'dfkjjsnmdskjdsckmdsfjialksnofnm';
 const router =express.Router();
 router.get('',(req, res) => {
+
+  console.log("inside avialable car");
     const query = 'SELECT * FROM cars WHERE is_available = true';
     db.query(query, (err, results) => {
       if (err) {

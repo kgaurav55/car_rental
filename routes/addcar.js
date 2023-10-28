@@ -14,6 +14,10 @@ router.post('', verifyToken, (req, res) => {
     if (req.user.role !== 'agency') {
       return res.status(403).json({ message: 'Only agency users can add cars' });
     }
+    if(!vehicle_model|| !vehicle_number|| ! seating_capacity|| ! rent_per_day)
+      {
+        return res.status(500).json({ message: 'Please fill all the details !' });
+      }
     // Add the car to the database (use your database connection)
     const insertQuery = 'INSERT INTO cars (vehicle_model,vehicle_number,seating_capacity,rent_per_day,is_available) VALUES (?, ?, ?, ?, ?)';
     db.query(insertQuery, [vehicle_model,vehicle_number,seating_capacity,rent_per_day,is_available ], (err, result) => {
