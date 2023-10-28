@@ -28,6 +28,10 @@ app.use('/bookcar',bookCarRoute);
 app.use('/availablecars',availableCarsRoute);
 app.use('/bookings',bookingsRoute);
 
+app.get('/hi',(req,res)=>{
+   res.send("hi there ");
+})
+
 
 
 
