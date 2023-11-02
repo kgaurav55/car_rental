@@ -1,9 +1,9 @@
 import mysql from 'mysql';
 const db = mysql.createConnection({
-  host: 'sql12.freesqldatabase.com',
-  user: 'sql12656509',
-  password: 'uqTPKvJkEL',
-  database: 'sql12656509',
+  host: 'sql11.freesqldatabase.com',
+  user: 'sql11658678',
+  password: 'S8XgnAQstX',
+  database: 'sql11658678',
   multipleStatements: true,
 });
 db.connect((err) => {
